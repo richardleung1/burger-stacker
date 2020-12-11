@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
 
+// Components
+import IngredientList from './components/IngredientList.js';
+
 function App() {
+  const ingredients = [
+    { name: 'Kaiser Bun', color: 'saddlebrown' },
+    { name: 'Sesame Bun', color: 'sandybrown' },
+    { name: 'Gluten Free Bun', color: 'peru' },
+    { name: 'Lettuce Wrap', color: 'olivedrab' },
+    { name: 'Beef Patty', color: '#3F250B' },
+    { name: 'Soy Patty', color: '#3F250B' },
+    { name: 'Black Bean Patty', color: '#3F250B' },
+    { name: 'Chicken Patty', color: 'burlywood' },
+    { name: 'Lettuce', color: 'lawngreen' },
+    { name: 'Tomato', color: 'tomato' },
+    { name: 'Bacon', color: 'maroon' },
+    { name: 'Onion', color: 'lightyellow' }
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <IngredientList ingredients={ingredients}/>
     </div>
   );
 }
